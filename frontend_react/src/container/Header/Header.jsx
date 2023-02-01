@@ -17,7 +17,7 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div className='app__header app__flex'>
+    <div id='home' className='app__header app__flex'>
 {/* Header & Name Badge */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -34,7 +34,8 @@ const Header = () => {
           </div>
           <div className='tag-cmp app__flex'>
             <p className='p-text'>Full-Stack Developer</p>
-            <p className='p-text'>Policy Research</p>
+            <p className='p-text'>Public Policy Research</p>
+            <p className='p-text'>Burmese Food Entrepreneur</p>
           </div>
         </div>
       </motion.div>
@@ -44,7 +45,7 @@ const Header = () => {
         transition={{ duration: 2, delayChildren: 2 }}
         className='app__header-img'
       >
-        <img src={images.MinP} alt='profile_bg' />
+        <img src={images.MinP2} alt='profile_bg' />
           <motion.img
             whileInView={{ scale: [0, 1] }}
             transition={{ duration: 2, delayChildren: 1, ease: 'easeInOut' }}
@@ -53,13 +54,13 @@ const Header = () => {
             className='overlay_circle'
           />
       </motion.div>
-{/*  */}
+{/* Circles */}
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
         className='app__header-circles'
       >
-        {[images.node, images.redux, images.javascript].map((circle, index) => (
+        {[images.node, images.html, images.git, images.graphql, images.css, images.react, images.javascript].map((circle, index) => (
           <div className='circle-cmp app__flex' key={`circle-${index}`}>
             <img src={circle} alt='circle'/>
           </div>
