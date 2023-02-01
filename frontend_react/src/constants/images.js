@@ -31,6 +31,9 @@ import Min from '../assets/Min.jpg';
 import MSLogo from '../assets/MorningStarLogo.png';
 import Min512 from '../assets/Min512.png';
 import Min192 from '../assets/Min192.png';
+import Nebula from '../assets/Nebula.png';
+import CosmicCliffs from '../assets/CosmicCliffs.png';
+import SulePolice from '../assets/SulePolice.jpg';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -77,5 +80,8 @@ export default {
   Min,
   MSLogo,
   Min512,
-  Min192
+  Min192,
+  Nebula,
+  CosmicCliffs,
+  SulePolice,
 };
