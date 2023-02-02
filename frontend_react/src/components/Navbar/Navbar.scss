@@ -27,6 +27,7 @@
         width: 100px;
         height: 100px;
         z-index: 6;
+        cursor: pointer;
     
         &:hover {
             -webkit-transform: scale(1.3);
@@ -118,6 +119,11 @@
         width: 70%;
         height: 70%;
         color: var(--white-color);
+        cursor: pointer;
+
+        &:hover {
+            color: #ffa200;
+        }
     }
 
     div {
