@@ -36,6 +36,7 @@ import MinP2 from '../assets/Min_P2.png';
 import Nebula from '../assets/Nebula.png';
 import CosmicCliffs from '../assets/CosmicCliffs.png';
 import SulePolice from '../assets/SulePolice.jpg';
+import vite from '../assets/vite.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -88,4 +89,5 @@ export default {
   SulePolice,
   MinP,
   MinP2,
+  vite,
 };

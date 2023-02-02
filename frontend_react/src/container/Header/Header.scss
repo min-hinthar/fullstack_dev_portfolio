@@ -111,6 +111,7 @@
     align-items: flex-start;
     height: 100%;
     margin-left: 1rem;
+    // z-index: 3;
 
     div {
         width: 100px;
@@ -140,17 +141,18 @@
         width: 120px;
         height: 120px;
         box-shadow: 0 0 20px rgba(12, 110, 37, 0.715);
+
     }
     div:nth-child(2) {
         margin: 1.75rem;
         width: 130px;
         height: 130px;
-        box-shadow: 0 0 20px rgba(184, 77, 7, 0.715);
+        box-shadow: 0 0 20px rgba(210, 0, 252, 0.936);
     }
     div:nth-child(3) {
         width: 100px;
         height: 100px;
-        box-shadow: 0 0 20px rgb(244, 124, 4);
+        box-shadow: 0 0 20px rgb(87, 82, 82);
     }
     div:nth-child(4) {
         margin: 2rem;
@@ -187,12 +189,12 @@
             margin: 1.75rem;
             width: 200px;
             height: 200px;
-            box-shadow: 0 0 20px rgba(184, 77, 7, 0.715);
+            box-shadow: 0 0 20px rgba(210, 0, 252, 0.936);
         }
         div:nth-child(3) {
             width: 150px;
             height: 150px;
-            box-shadow: 0 0 20px rgb(244, 124, 4);
+            box-shadow: 0 0 20px rgb(87, 82, 82);
         }
         div:nth-child(4) {
             margin: 1.75rem;
