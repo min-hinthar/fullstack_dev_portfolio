@@ -1,0 +1,30 @@
+.app__about {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__profiles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    background-image: linear-gradient(to right bottom, #a51c30, #a92a60, #9a4589, #7e5fa7, #5974b6, #3587c1, #0097c2, #00a6bd, #00bab3, #29ca94, #80d668, #cdd93b);
+}
+
+.app__profiles-item {
+    width: 25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 2rem;
+
+    img {
+        width: 100%;
+        height: 20rem;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(237, 206, 29, 0.934);
+    }
+}
