@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { GiHamburger } from 'react-icons/gi';
+import { AiFillCloseCircle } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 import './Navbar.scss';
@@ -27,13 +28,13 @@ const Navbar = () => {
         ))}
       </ul>
       <div className='app__navbar-menu'>
-          <HiMenuAlt4 onClick={() => setToggle(true)}/>
+          <GiHamburger onClick={() => setToggle(true)}/>
           {toggle && (
               <motion.div
                 whileInView={{ x: [300, 0] }}
                 transition={{ duration: 1, ease: 'easeOut'}}
               >
-                <HiX onClick={() => setToggle(false)}/>
+                <AiFillCloseCircle onClick={() => setToggle(false)}/>
                   <ul>
                     {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                       <li
