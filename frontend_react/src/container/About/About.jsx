@@ -33,11 +33,9 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        Critical+Divergent
-          <span>Design Thinking</span>
+        Critical+Divergent <span>Design Thinking</span>
         <br/>
-        Empathetic Leadership
-          <span>Strategic Planning</span>
+        Empathetic Leadership <span>Strategic Planning</span>
       </h2>
       <div className='app__profiles'>
         {abouts.map((about, index) => (

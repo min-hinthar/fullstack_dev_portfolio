@@ -41,6 +41,7 @@ import vite from '../assets/vite.png';
 import UCLA from '../assets/UCLA.jpg';
 import USPTA from '../assets/USPTA1.png';
 import Wooster from '../assets/Wooster1.png';
+import OpenAI from '../assets/openAI.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -98,4 +99,5 @@ export default {
   MSLogoXL,
   USPTA,
   Wooster,
+  OpenAI,
 };
