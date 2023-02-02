@@ -109,12 +109,13 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 
   padding: 1rem;
 
   div {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: var(--white-color);
     margin: 0.25rem 0;
@@ -127,14 +128,20 @@
     transition: all 0.3s ease-in-out;
 
     svg {
-      width: 15px;
-      height: 15px;
+      width: 30px;
+      height: 30px;
       color: var(--gray-color);
     }
 
     &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
+      background-color: #3B87A7;
+      border-color: var(--gray-color);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+       transform: scale(1.2);
+       transition: 1s ease-in-out;
+       box-shadow: 0 0 20px rgba(237, 206, 29, 0.934);
 
       svg {
         color: var(--white-color);
@@ -164,16 +171,18 @@
   padding: 1rem;
 
   .app__navigation-dot {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #cbcbcb;
     margin: 0.5rem;
+    box-shadow: 0 0 20px rgb(255, 0, 76);
 
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: #3B87A7;
+      box-shadow: 0 0 20px rgb(255, 230, 0);
     }
 
     @media screen and (min-width: 2000px) {

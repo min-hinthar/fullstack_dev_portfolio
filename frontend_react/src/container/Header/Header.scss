@@ -26,6 +26,12 @@
 
     @media screen and (min-width: 2000px) {
         padding-top: 8rem;
+        margin-top: 5rem;
+
+        .app__header-img, .overlay_circle {
+            justify-content: center;
+            align-items: center;
+        }
     }
     @media screen and (max-width: 1200px) {
         flex-direction: column;
