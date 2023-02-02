@@ -81,6 +81,7 @@
   font-weight: 400;
   color: ivory;
   line-height: 1.5;
+  text-shadow: 1px 1px 3px rgb(201, 177, 56), 1px 1px 4px rgb(255, 0, 119);
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
@@ -92,6 +93,7 @@
   font-weight: 800;
   color: var(--black-color);
   text-align: left;
+  text-shadow: 1px 1px 3px rgb(201, 177, 56), 1px 1px 4px rgb(255, 0, 119);
 
   @media screen and (min-width: 2000px) {
     font-size: 2rem;

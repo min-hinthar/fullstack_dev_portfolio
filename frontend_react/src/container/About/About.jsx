@@ -3,33 +3,22 @@ import { motion } from 'framer-motion';
 
 import './About.scss';
 
-import { images } from '../../constants';
-
-const abouts = [
-  { 
-    title: 'Full-Stack Web Development',
-    description: 'UCLA Coding BootCamp',
-    imgUrl: images.UCLA
-  },
-  { 
-    title: 'Public Policy Research',
-    description: 'B.A Political Science',
-    imgUrl: images.Wooster
-  },
-  { 
-    title: 'Burmese Food Entrepreneur',
-    description: 'Mandalay Morning Star LLC',
-    imgUrl: images.MSLogoXL
-  },
-  { 
-    title: 'USPTA Tennis Instructor',
-    description: 'PlaySafe & CPR Certified',
-    imgUrl: images.USPTA
-  },
-];
-
+import { urlFor, client } from '../../client';
 
 const About = () => {
+
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+
+    const query = '*[_type == "abouts"]';
+    
+    client.fetch(query)
+      .then((data) =>
+        setAbouts(data))
+  }, []);
+  
+
   return (
     <>
       <h2 className='head-text'>
@@ -38,7 +27,7 @@ const About = () => {
         Empathetic Leadership <span>Strategic Planning</span>
       </h2>
       <div className='app__profiles'>
-        {abouts.map((about, index) => (
+        {abouts.slice(0).reverse().map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.2 }}
@@ -46,7 +35,7 @@ const About = () => {
             className='app__profiles-item'
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title}/>
+            <img src={urlFor(about.imgUrl)} alt={about.title}/>
             <h2 className='bold-text' style={{ marginTop: 20 }}>
               {about.title}
             </h2>
