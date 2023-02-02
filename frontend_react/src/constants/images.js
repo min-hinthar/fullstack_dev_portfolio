@@ -29,6 +29,7 @@ import logo from '../assets/logo.png';
 
 import Min from '../assets/Min.jpg';
 import MSLogo from '../assets/MorningStarLogo.png';
+import MSLogoXL from '../assets/MorningStarXL.png';
 import Min512 from '../assets/Min512.png';
 import Min192 from '../assets/Min192.png';
 import MinP from '../assets/Min_P.png';
@@ -37,6 +38,9 @@ import Nebula from '../assets/Nebula.png';
 import CosmicCliffs from '../assets/CosmicCliffs.png';
 import SulePolice from '../assets/SulePolice.jpg';
 import vite from '../assets/vite.png';
+import UCLA from '../assets/UCLA.jpg';
+import USPTA from '../assets/USPTA1.png';
+import Wooster from '../assets/Wooster1.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -90,4 +94,8 @@ export default {
   MinP,
   MinP2,
   vite,
+  UCLA,
+  MSLogoXL,
+  USPTA,
+  Wooster,
 };
