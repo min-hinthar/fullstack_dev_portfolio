@@ -26,7 +26,18 @@ const Work = () => {
   
 
   const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+
+      if(item === 'All') {
+        setFilterWorks(works);
+      } else {
+        setFilterWorks(works.filter((work) => work.tags.includes(item)))
+      }
+    }, 500)
   }
 
   return (
@@ -38,7 +49,7 @@ const Work = () => {
       </h2>
     {/* Category Filter */}
       <div className='app__work-filter'>
-        {['MERN Stack', 'OpenAI', 'React JS', 'GraphQL', 'All'].map((item, index) => (
+        {['MERN Stack', 'OpenAI', 'React JS', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -54,7 +65,7 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className='app__work-portfolio'
       >
-        {filterWorks.slice(0).reverse().map((work, index) => (
+        {filterWorks.map((work, index) => (
           <div className='app__work-item app__flex' key={index}>
             <div className='app__work-img app__flex'>
               <img src={urlFor(work.imgUrl)} alt={work.name} />
