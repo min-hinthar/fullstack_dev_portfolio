@@ -13,7 +13,7 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
         {/* Copyright */}
             <div className='copyright'>
                 <p className='p-text'>
-                    Ⓒ 2023 MIN K.K
+                    © 2023 MIN K.K
                 </p>
                 <p className='p-text'>
                     All Rights Reserved

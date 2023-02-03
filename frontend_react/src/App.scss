@@ -1,7 +1,7 @@
 .app {
   background-color: var(--primary-color);
   font-family: var(--font-base);
-  background-image: radial-gradient(circle, #cdd93b, #95e06b, #60e19b, #35ddc3, #42d6dd, #7FC9E6, #3cc8e8, #59b7ea, #7aa5e1, #9285cd, #aa60a6, #b3396e, #3B87A7, #aa60a6, #b3396e, #cdd93b,);
+  background-image: radial-gradient(circle, #cdd93b, #95e06b, #60e19b, #35ddc3, #42d6dd, #9285cd, #aa60a6, #b3396e, #3B87A7, #aa60a6, #b3396e, #cdd93b,);
 }
 
 .app__whitebg {
@@ -48,7 +48,10 @@
 
   p {
     text-transform: uppercase;
-    color: var(--black-color);
+    color: var(--primary-color);
+    text-shadow: none;
+    font-weight: 800;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }
 
@@ -174,7 +177,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: var(--primary-color);
     margin: 0.5rem;
     box-shadow: 0 0 20px rgb(255, 0, 76);
 
