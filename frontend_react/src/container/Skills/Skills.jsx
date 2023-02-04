@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
+
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client, urlFor } from '../../client';
-
 import './Skills.scss';
 
 const Skills = () => {
@@ -33,7 +33,7 @@ const Skills = () => {
       <div className='app__skills-container'>
     {/* Skills */}
         <motion.div className='app__skills-list'>
-          {skills?.map((skill) => (
+          {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1]}}
               transition={{duration: 0.5}}
@@ -50,19 +50,19 @@ const Skills = () => {
           ) )}
         </motion.div>
     {/* Experiences */}
-        <motion.div className='app__skills-exp'>
-          {experiences?.map((experiences) => (
+        <div className='app__skills-exp'>
+          {experiences.map((experience) => (
             <motion.div
               className='app__skills-exp-item'
-              key={experiences.year}
+              key={experience.year}
             >
               <div className='app__skills-exp-year'>
                 <p className='bold-text'>
-                  {experiences.year}
+                  {experience.year}
                 </p>
               </div>
               <motion.div className='app__skills-exp-works'>
-                {experiences?.works?.map((work) => (
+                {experience.works.map((work) => (
                   <>
                     <motion.div
                       whileInView={{ opacity: [0, 1]}}
@@ -92,7 +92,7 @@ const Skills = () => {
               </motion.div>
             </motion.div> 
           ))}
-        </motion.div>
+        </div>
       </div>
     </>
   )

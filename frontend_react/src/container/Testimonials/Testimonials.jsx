@@ -12,6 +12,10 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleClick = (index) => {
+    setCurrentIndex(index);
+  }
+
   useEffect(() => {
     const query = '*[_type == "testimonials"]';
     const brandsQuery = '*[_type == "brands"]';
@@ -26,8 +30,52 @@ const Testimonials = () => {
       })
   }, [])
 
+  const testies = testimonials[currentIndex];
+
   return (
-    <div>Testimonials</div>
+    <>
+      {testimonials.length && (
+        <>
+          <div className='app__testimonial-item app__flex'>
+            <img src={urlFor(testies.imageurl).url()} alt={testimonials[currentIndex].name}/>
+            <div className='app__testimonial-content'>
+              <p className='p-text'>
+                {testies.feedback}
+              </p>
+              <div>
+                <h4 className='bold-text'>
+                  {testies.name}
+                </h4>
+                <h5 className='p-text'>
+                  {testies.company}
+                </h5>
+              </div>
+            </div>
+          </div>
+      {/* Buttons */}
+          <div className='app__testimonial-btns app__flex'>
+            <div className='app__flex' onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
+              <HiChevronLeft />
+            </div>
+            <div className='app__flex' onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
+              <HiChevronRight />
+            </div>
+          </div>
+        </>
+      )}
+    {/*  */}
+      <div className='app__testimonials-brands app__flex'>
+        {brands.map((brand) => (
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 0.5, type: 'tween' }}
+            key={brand._id}
+          >
+            <img src={urlFor(brand.imgUrl).url()} alt={brand.name}/>
+          </motion.div>
+        ))}
+      </div>
+    </>
   )
 }
 
