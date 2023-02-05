@@ -70,7 +70,7 @@ const Footer = () => {
           <input 
             className='p-text'
             type='text'
-            placeholder='Your Name'
+            placeholder='Name...'
             name='name'
             value={name}
             onChange={handleChangeInput}
@@ -80,7 +80,7 @@ const Footer = () => {
           <input 
             className='p-text'
             type='email'
-            placeholder='Your Email'
+            placeholder='Email...'
             name='email'
             value={email}
             onChange={handleChangeInput}
@@ -89,7 +89,7 @@ const Footer = () => {
         <div>
           <textarea 
             className='p-text'
-            placeholder='Your Message...'
+            placeholder='Message...'
             value={message}
             name='message'
             onChange={handleChangeInput}
@@ -112,5 +112,5 @@ const Footer = () => {
 
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
-  'footer'
+  'contact'
   );
