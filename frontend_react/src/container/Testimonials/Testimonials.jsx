@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { FaChevronCircleRight, FaChevronCircleLeft } from 'react-icons/fa';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client, urlFor } from '../../client';
@@ -55,10 +55,10 @@ const Testimonials = () => {
       {/* Buttons */}
           <div className='app__testimonial-btns app__flex'>
             <div className='app__flex' onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
-              <HiChevronLeft />
+              <FaChevronCircleLeft />
             </div>
             <div className='app__flex' onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
-              <HiChevronRight />
+              <FaChevronCircleRight />
             </div>
           </div>
         </>
