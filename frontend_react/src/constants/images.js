@@ -36,6 +36,7 @@ import MinP from '../assets/Min_P.png';
 import MinP2 from '../assets/Min_P2.png';
 import Nebula from '../assets/Nebula.png';
 import CosmicCliffs from '../assets/CosmicCliffs.png';
+import SouthernRing from '../assets/SouthernRing.png';
 import SulePolice from '../assets/SulePolice.jpg';
 import vite from '../assets/vite.png';
 import UCLA from '../assets/UCLA.jpg';
@@ -92,6 +93,7 @@ export default {
   Min192,
   Nebula,
   CosmicCliffs,
+  SouthernRing,
   SulePolice,
   MinP,
   MinP2,

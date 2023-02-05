@@ -10,7 +10,7 @@
     display: flex;
     padding: 2rem;
     transition: all 0.5s ease-in-out;
-    border-radius: 5%;
+    border-radius: 1rem;
     background-image: radial-gradient(circle, #d0490c, #d46600, #d48100, #d29a00, #cdb300, #ccb000, #ccae00, #cbab00, #cd8d00, #cd6c00, #ca4600, #c30101);    
 
     img {
@@ -46,18 +46,18 @@
 
     p {
         padding: 1rem;
-        font-size: 1.25rem;
+        // font-size: 1.25rem;
         font-family: var(--font-base);
     }
 
     h4 {
-        font-weight: 600;
+        font-weight: 800;
         margin-top: 2rem;
     }
 
     h5 {
-        font-weight: 400;
-        margin-top: 1rem;
+        font-weight: 500;
+        margin-top: 0.5rem;
     }
 }
 

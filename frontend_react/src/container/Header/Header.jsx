@@ -13,7 +13,7 @@ const scaleVariants = {
     transition: {
       duration: 2,
       ease: 'easeInOut',
-      delayChildren: 0.5,
+      staggerChildren: 0.5,
     }
   }
 }
@@ -49,13 +49,13 @@ const Header = () => {
 {/* Header IMG */}
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 2, delayChildren: 1 }}
+        transition={{ duration: 2, staggerChildren: 1 }}
         className='app__header-img'
       >
         <img src={images.MinP2} alt='profile_bg' />
           <motion.img
             whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 2, delayChildren: 1, ease: 'easeInOut' }}
+            transition={{ duration: 2, staggerChildren: 1, ease: 'easeInOut' }}
             src={images.circle}
             alt='profile_circle'
             className='overlay_circle'

@@ -33,7 +33,7 @@ const Skills = () => {
       <div className='app__skills-container'>
     {/* Skills */}
         <motion.div className='app__skills-list'>
-          {skills.map((skill) => (
+          {skills.slice(0).sort((a, b) => a - b).reverse().map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1]}}
               transition={{duration: 0.5}}
@@ -51,7 +51,7 @@ const Skills = () => {
         </motion.div>
     {/* Experiences */}
         <div className='app__skills-exp'>
-          {experiences.map((experience) => (
+          {experiences.slice(0).sort((a, b) => a - b).reverse().map((experience) => (
             <motion.div
               className='app__skills-exp-item'
               key={experience.year}
@@ -84,6 +84,7 @@ const Skills = () => {
                       effect='solid'
                       arrowColor='#fff'
                       className='skills-tooltip'
+                      key={work.desc}
                     >
                       {work.desc}
                     </ReactTooltip>

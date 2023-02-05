@@ -9,6 +9,9 @@
     margin-top: 3rem;
     display: flex;
     flex-direction: row;
+    background-image: linear-gradient(to left bottom, #e9d717, #add743, #75d26a, #3fc88b, #00bba3, #00afb9, #00a0c7, #008fc8, #5c76c3, #9056a4, #aa316f, #a51c30);
+    padding: 1rem;
+    border-radius: 1rem;
 
     @media screen and (max-width: 900px) {
         width: 100%;

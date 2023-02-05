@@ -1,7 +1,10 @@
 .app {
   background-color: var(--primary-color);
   font-family: var(--font-base);
-  background-image: radial-gradient(circle, #cdd93b, #95e06b, #60e19b, #35ddc3, #42d6dd, #9285cd, #aa60a6, #42d6dd, #9285cd, #b3396e9e, #3B87A7, #60e19b, #35ddc3, #42d6dd, #9285cd,  #aa60a6, #b3396e, #cdd93b,);
+  // background-image: radial-gradient(circle, #cdd93b, #95e06b, #60e19b, #35ddc3, #42d6dd, #9285cd, #aa60a6, #42d6dd, #9285cd, #b3396e9e, #3B87A7, #60e19b, #35ddc3, #42d6dd, #9285cd,  #aa60a6, #b3396e, #cdd93b,);
+  background-image: radial-gradient(circle, #e9d717, #add743, #75d26a, #3fc88b, #00bba3, #00afb9, #00a0c7, #008fc8, #5c76c3, #9056a4, #aa316f, #a51c30);
+  // background-image: url('../src/assets/SouthernRing.png');
+  object-fit: cover;
 }
 
 .app__whitebg {
