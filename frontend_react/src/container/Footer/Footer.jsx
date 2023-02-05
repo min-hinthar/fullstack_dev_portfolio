@@ -20,6 +20,23 @@ const Footer = () => {
     setFormData({ ...formData, [name]: value });
   }
 
+  const handleSubmit = () => {
+    setLoading(true);
+
+    const contact = {
+      _type: 'contact',
+      name: name,
+      email: email,
+      message: message,
+    }
+
+    client.create(contact)
+      .then(() => {
+        setLoading(false);
+        setIsFormSubmitted(true)
+      })
+  }
+
   return (
     <>
       <h2 className='head-text'>
@@ -47,6 +64,7 @@ const Footer = () => {
         </div>
       </div>
   {/* Contact Form */}
+    {!isFormSubmitted ? 
       <div className='app__footer-form app__flex'>
         <div className='app__flex'>
           <input 
@@ -81,6 +99,13 @@ const Footer = () => {
           {loading ? 'Sending...' : 'Send Message'}
         </button>
       </div>
+    :
+      <div>
+        <h3 className='head-text'>
+          🥳 Thank you for reaching out to me! 🎉
+        </h3>
+      </div>
+    }
     </>
   )
 }
