@@ -13,7 +13,9 @@ const Navbar = () => {
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <img src={images.Min192} alt='logo' />
+        <a href='https://www.linkedin.com/in/minkkhant93/' target='_blank' rel='noreferrer'>
+          <img src={images.Min192} alt='logo'/>
+        </a>
       </div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'testimonials', 'contact'].map((item) => (
