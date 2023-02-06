@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
+import ConfettiExplosion from 'react-confetti-explosion';
+import emailjs from '@emailjs/browser';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
+
+const bigExplodeProps = {
+  force: 0.7,
+  duration: 5000,
+  particleCount: 400,
+  height: 350,
+  width: 2500,
+};
+
 
 
 const Footer = () => {
@@ -33,14 +44,33 @@ const Footer = () => {
     client.create(contact)
       .then(() => {
         setLoading(false);
-        setIsFormSubmitted(true)
+        setIsFormSubmitted(true);
       })
+
+      emailjs
+      .send(
+          'service_z38uhdc',
+          'template_2jrgduk',
+          formData,
+          '3hWsxVpJE46h3KMBY'
+      )
+      .then((result) => {
+          alert('Thanks! Your message has been successfully sent!')
+          console.log('Success', result.status, result.text);
+          setTimeout(function(){
+            window.location.reload();
+            alert('Message successfully submitted. Thanks for visiting my page! This page will refresh now.')
+         }, 5000);
+      }, (error) => {
+          alert('Sorry! Your message failed to send. Please try again with valid input. Thanks!')
+          console.log(error.text);
+      });
   }
 
   return (
     <>
       <h2 className='head-text'>
-        Let's <span> chat </span> over Burmese <span> Tea </span>!
+        ☕ Let's <span> chat </span> over Burmese <span> Tea </span>! 🍵
       </h2>
   {/* Cards for Email and Tel */}
       <div className='app__footer-cards'>
@@ -66,41 +96,42 @@ const Footer = () => {
   {/* Contact Form */}
     {!isFormSubmitted ? 
       <div className='app__footer-form app__flex'>
-        <div className='app__flex'>
-          <input 
-            className='p-text'
-            type='text'
-            placeholder='Name...'
-            name='name'
-            value={name}
-            onChange={handleChangeInput}
-          />
+          <div className='app__flex'>
+            <input 
+              className='p-text'
+              type='text'
+              placeholder='Name...'
+              name='name'
+              value={name}
+              onChange={handleChangeInput}
+            />
+          </div>
+          <div className='app__flex'>
+            <input 
+              className='p-text'
+              type='email'
+              placeholder='Email...'
+              name='email'
+              value={email}
+              onChange={handleChangeInput}
+            />
+          </div>
+          <div>
+            <textarea 
+              className='p-text'
+              placeholder='Message...'
+              value={message}
+              name='message'
+              onChange={handleChangeInput}
+            />
+          </div>
+          <button type='button' value='submit' className='p-text' onClick={handleSubmit}>
+            {loading ? 'Sending...' : 'Send Message'}
+          </button>
         </div>
-        <div className='app__flex'>
-          <input 
-            className='p-text'
-            type='email'
-            placeholder='Email...'
-            name='email'
-            value={email}
-            onChange={handleChangeInput}
-          />
-        </div>
-        <div>
-          <textarea 
-            className='p-text'
-            placeholder='Message...'
-            value={message}
-            name='message'
-            onChange={handleChangeInput}
-          />
-        </div>
-        <button type='button' className='p-text' onClick={handleSubmit}>
-          {loading ? 'Sending...' : 'Send Message'}
-        </button>
-      </div>
     :
-      <div>
+      <div className='confetti'>
+        <ConfettiExplosion {...bigExplodeProps} />
         <h3 className='head-text'>
           🥳 Thank you for reaching out to me! 🎉
         </h3>
