@@ -1,8 +1,14 @@
 # Project Title: [ Fullstack_Dev_Portfolio ]
 
-Deployed on Netlify Live URL: [  ]
+Deployed on Netlify Live URL: [ https://minkkhant-portfolio.netlify.app/ ]
 
-![App Screenshots](./src/utils/assets/.jpeg)
+![App Screenshots](./frontend_react/src/assets/portfolio_1.jpg)
+![App Screenshots](./frontend_react/src/assets/portfolio_2.jpg)
+![App Screenshots](./frontend_react/src/assets/portfolio_3.jpg)
+![App Screenshots](./frontend_react/src/assets/portfolio_4.jpg)
+![App Screenshots](./frontend_react/src/assets/portfolio_5.jpg)
+![App Screenshots](./frontend_react/src/assets/portfolio_6.jpg)
+![App Screenshots](./frontend_react/src/assets/portfolio_7.jpg)
 
 ## Table of Contents
 1. [Description](#description)
@@ -16,7 +22,7 @@ Deployed on Netlify Live URL: [  ]
 -----
 
 ### Description 
-This project is to create a modern and responsive Fullstack Developer's Portfolio - Being a web developer means being part of a community. This will be a place to share my projects so that I can share my work with fellow developers and collaborate on future projects.
+This project is to develop a full-stack web developer's portfolio website with Home, About, Work, Skills, Testimonials, and Contact sections. The website should be modern, mobile responsive, and utilize React as the frontend framework, Sanity as the backend, deployed on Netlify and Email JS for contact management and auto-reply features. This will be a place to share my projects so that I can share my portfolio with fellow developers and collaborate on future projects.
 
 
 -----
@@ -28,6 +34,10 @@ SCSS,
 
 Node.js,
 
+Email JS,
+
+Sanity Client
+
 
 ### Tech-Stacks
 React,
@@ -36,7 +46,9 @@ Pleasant Animations,
 
 Framer Motion,
 
-Sanity
+Sanity,
+
+Email JS
 
 -----
 
@@ -48,7 +60,7 @@ Open Source MIT
 
 #### User Story
 
-AS AN employer looking for candidates with experience building single-page applications I WANT to view a potential employee's deployed React portfolio of work samples SO THAT I can assess whether they're a good candidate for an open position
+As a web developer, I want to create a portfolio website that showcases my work, skills, and contact information in a modern and mobile responsive way.
 
 
 #### Acceptance Criteria:
@@ -94,7 +106,7 @@ MIT
 
 -----
 
-Deployed on Netlify Live URL: [  ]
+Deployed on Netlify Live URL: [ https://minkkhant-portfolio.netlify.app/ ]
 
 ### Questions 
 
